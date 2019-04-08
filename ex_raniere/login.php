@@ -6,9 +6,9 @@
 </head>
 <body>
 <h3>Login</h3>
-	<form action="auth.php" method="post">
+	<form action="auth.php" method="POST">
 		<input type="text" name="email" placeholder="email">
-		<input type="text" name="senha" placeholder="senha">
+		<input type="password" name="senha" placeholder="senha">
 
 		<input type="submit" name="Entrar">
 	</form>

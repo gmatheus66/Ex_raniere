@@ -2,21 +2,20 @@
 	
 	$itensfile = [];
     if (file_exists('csv/itens.csv')) {
-        $intensfile = file('csv/itens.csv');
+        $itensfile = file('csv/itens.csv');
     }
 
 
     function explodir($el) {
-        $intensdata = explode(',', $el);
+        $itensdata = explode(',', $el);
         return [
-            'usuarioEmail' => $itensdata[0],
-            'nome' => $itensdata[1],
-            'autor' => $itensdata[2]
+            'item' => $itensdata[0],
+            'descricao' => $itensdata[1]
+            
         ];
+
     }
-    $livros = array_map('explodir', $itensfile);
-
-
+    $itens = array_map('explodir', $itensfile);
 
 
  ?>
@@ -37,13 +36,16 @@
 				<th>Descricao</th>
 			</tr>
 
-				<?php foreach ($variable as $id => $item): ?>
+				<?php foreach ($itens as $id => $item): ?>
 					<tr>
-					     <td><?= $livro['nome'] ?></td>
-              			 <td><?= $livro['autor'] ?></td>
+					     <td><?= $item['item'] ?></td>
+              			 <td><?= $item['descricao'] ?></td>
           			</tr>
 				<?php endforeach ?>
 
 		</table>
+
+		<h3><a href="register.php">cadastro</a></h3>
+		<h3><a href="login.php">Login</a></h3>
 </body>
 </html>

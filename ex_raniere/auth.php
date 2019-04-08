@@ -1,4 +1,5 @@
-include 'init.php'
+<?php 
+include 'init.php';
 
 
 $email = post('email');
@@ -13,3 +14,19 @@ foreach($users as $user) {
         break;
     }
 }
+
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<?php if(logado()): ?>
+			<?php redirecionar('index.php') ?>
+	<?php else: ?>
+        Login ou senha incorreto. <a href="login.php">Clique para voltar</a>
+	<?php endif ?>
+</body>
+</html>
