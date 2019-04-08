@@ -1,5 +1,6 @@
 <?php 
-	
+	include 'init.php';
+
 	$itensfile = [];
     if (file_exists('csv/itens.csv')) {
         $itensfile = file('csv/itens.csv');
@@ -26,9 +27,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tabela Doação</title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	
+	<?php if (get('messagem') !== false): ?>
+        <div class="messagem">
+            <?= get('messagem') ?>
+        </div>
+    <?php endif ?>
 
 		<table>
 			<tr>
@@ -45,7 +51,21 @@
 
 		</table>
 
-		<h3><a href="register.php">cadastro</a></h3>
-		<h3><a href="login.php">Login</a></h3>
+			<a href="register.php">cadastro</a>
+			<a href="login.php">Login</a>
+			<a href="sair.php">Sair</a>
+
+		<?php if(logado()): ?>
+		<div class="cadastroitens">
+			<form action="cadastroitens.php">
+				<input type="text" name="item" placeholder="item">
+				<br>
+				<input type="text" name="descricao" placeholder="descricao">	
+				<br>				
+				<input type="submit" name="cadastrar">
+
+			</form>
+		</div>
+		<?php endif ?>
 </body>
 </html>

@@ -2,6 +2,10 @@
 
 session_start();
 
+function get($name){
+	return $_GET[$name];
+}
+
 function post($name){
 	return $_POST[$name];
 }
@@ -24,6 +28,13 @@ function logado(){
 function redirecionar($caminho){
 	header('location: '. $caminho);
 	exit();
+
+}
+
+function sair(){
+    $_SESSION['logado'] = false;
+    unset($_SESSION['usuario']);
+    unset($_SESSION['email']);
 
 }
 
