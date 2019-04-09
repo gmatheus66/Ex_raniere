@@ -4,7 +4,6 @@
 	$item = get('item');
 	$descricao = get('descricao');
 	$usuario = currentUser();
-	print_r($usuario);
 
 	$dados = juntar([$item,$descricao,$usuario]) . "\n";
 

@@ -51,7 +51,7 @@
 					     <td><?= $item['item'] ?></td>
               			 <td><?= $item['descricao'] ?></td>
               			 <?php if(logado()): ?>
-              			 	<td><a href="#"><?= $item['usuario'] ?></a></td>
+              			 	<td><a href="infouser.php?usuario=<?=$item['usuario']?>"><?= $item['usuario'] ?></a></td>
               			 <?php endif ?>
           			</tr>
 				<?php endforeach ?>

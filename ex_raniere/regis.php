@@ -7,6 +7,9 @@ include'init.php';
 	$email = post('email');
 	$senha = post('senha');
 	$senha2 = post('senha2');
+	$telefone = post('telefone');
+	$cidade = post('cidade');
+	$bairro = post('bairro');
 
  ?>
 
@@ -17,7 +20,7 @@ include'init.php';
  <?php endif ?>
 
  <?php 
- 				$dados = juntar([$nome,$sobrenome,$email,md5($senha)]) . "\n";
+ 				$dados = juntar([$nome,$sobrenome,$email,$telefone, $cidade , $bairro ,md5($senha)]) . "\n";
 
  				$handle = fopen('csv/dados.csv', 'a');
  				fwrite($handle, $dados);
