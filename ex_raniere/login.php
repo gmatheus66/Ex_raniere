@@ -1,8 +1,11 @@
+<?php 
+	include 'init.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title><?= TITLE ?></title>>
 </head>
 <body>
 <h3>Login</h3>

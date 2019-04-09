@@ -22,5 +22,5 @@ include'init.php';
  				$handle = fopen('csv/dados.csv', 'a');
  				fwrite($handle, $dados);
 
- 				header('location: index.php?messagem=Usuário ' . $email . ' cadastrado');
+ 				header('location: index.php?menssagem=Usuário ' . $email . ' cadastrado');
   ?>

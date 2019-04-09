@@ -11,7 +11,8 @@
         $itensdata = explode(',', $el);
         return [
             'item' => $itensdata[0],
-            'descricao' => $itensdata[1]
+            'descricao' => $itensdata[1],
+            'usuario' => $itensdata[2]
             
         ];
 
@@ -26,13 +27,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tabela Doação</title>
+	<title><?= TITLE ?></title>
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<?php if (get('messagem') !== false): ?>
-        <div class="messagem">
-            <?= get('messagem') ?>
+	<?php if (get('menssagem') !== false): ?>
+        <div class="menssagem">
+            <?= get('menssagem') ?>
         </div>
     <?php endif ?>
 
@@ -40,29 +41,36 @@
 			<tr>
 				<th>Item</th>
 				<th>Descricao</th>
+				<?php if(logado()): ?>
+					<th>Usuario</th>
+				<?php endif ?>
 			</tr>
 
 				<?php foreach ($itens as $id => $item): ?>
 					<tr>
 					     <td><?= $item['item'] ?></td>
               			 <td><?= $item['descricao'] ?></td>
+              			 <?php if(logado()): ?>
+              			 	<td><a href="#"><?= $item['usuario'] ?></a></td>
+              			 <?php endif ?>
           			</tr>
 				<?php endforeach ?>
 
 		</table>
-
-			<a href="register.php">cadastro</a>
+		<div class="link">
+			<a href="register.php">Cadastro</a>
 			<a href="login.php">Login</a>
 			<a href="sair.php">Sair</a>
+		</div>
 
 		<?php if(logado()): ?>
 		<div class="cadastroitens">
 			<form action="cadastroitens.php">
-				<input type="text" name="item" placeholder="item">
-				<br>
-				<input type="text" name="descricao" placeholder="descricao">	
-				<br>				
-				<input type="submit" name="cadastrar">
+				<input type="text" name="item" placeholder="Item">
+			
+				<input type="text" name="descricao" placeholder="Descricao">	
+							
+				<input id="button" type="submit" name="Cadastrar">
 
 			</form>
 		</div>

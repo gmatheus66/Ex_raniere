@@ -38,6 +38,15 @@ function sair(){
 
 }
 
+function currentUser() {
+    if (!logado()) {
+        return false;
+    }
+    return $_SESSION['usuario'] ?? false;
+}
+
+define(TITLE, 'Sistema de Doação')
+
 
 
 ?>
