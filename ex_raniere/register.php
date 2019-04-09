@@ -18,7 +18,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Cadastro</title>
+	<title><?= TITLE ?></title
 </head>
 <body>
 	<h3>Cadastro</h3>

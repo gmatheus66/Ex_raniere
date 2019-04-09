@@ -1,8 +1,7 @@
 table{
 	margin-top: 3%;
 	margin-left: 30%;
-	margin-right: 30%;
-
+	
 
 }
 
@@ -10,10 +9,10 @@ table{
 table, tr, td, th {
 	border: 1px solid black;
 	border-collapse: collapse;
-	padding: 2%;
-	width: 40%;
+	
+	width: 10%;
 	height: 30%;
-	padding: 5%;
+	padding: 30px;
 }
 
 
@@ -68,4 +67,8 @@ input{
   display: inline-block;
   font-size: 10px;
   border-radius: 10%;
+}
+h2{
+	margin-left: 40%;
+	width: 20%;
 }

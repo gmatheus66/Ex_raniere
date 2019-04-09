@@ -1,0 +1,27 @@
+a{
+	color: black;
+	margin-left: 4%;
+	display: inline-block;
+	text-decoration:none;
+	padding: 1%;
+	
+}
+
+a:hover{
+	 
+	background-color: #ff6e00;
+	color: white;
+	padding: 3%;
+}
+.link{
+	margin-top: 3%;
+	width: 10%;
+	margin-right: 50%;
+	margin-left: 50%;
+}
+
+h3{
+	margin-top: 5%;
+	margin-left: 45%; 
+	font-size: 2em;
+}

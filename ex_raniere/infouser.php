@@ -33,6 +33,7 @@ foreach($users as $user) {
  	<link rel="stylesheet" href="css/infouser.css">
  </head>
  <body>
+ 	<h2>Informações do Doador</h2>
  	<table>
  		<tr>
  			<th>Nome</th>
@@ -52,6 +53,8 @@ foreach($users as $user) {
 		</tr>
 
 	</table>
-	<a href="index.php">Voltar</a>
+	<div class="link">
+		<a href="index.php">Voltar</a>
+	</div>
  </body>
  </html>
