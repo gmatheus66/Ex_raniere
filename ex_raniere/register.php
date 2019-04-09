@@ -18,19 +18,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?= TITLE ?></title
+	<title><?= TITLE ?></title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<h3>Cadastro</h3>
+<div class="link">
 	<form action="regis.php" method="POST">
 		<?php foreach ($input as $name => $type): ?>
 			<input type="<?= $type ?>" name="<?= $name ?>" placeholder="<?= $name ?>">
 		<?php endforeach ?>
 
-		<input type="submit" name="Enviar">
+		<input id="button" type="submit" name="Enviar">
 
 
 	</form>
+</div>
 	
 </body>
 </html>
