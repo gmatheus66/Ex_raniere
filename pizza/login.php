@@ -8,7 +8,7 @@ $name = $_POST['name']?? "";
 $pw = $_POST['pw']?? "";
 
 if($name == "" || $pw == ""){
-	redirect("index.php");
+	echo 'Nome ou Senha Estao Vazios';
 	exit();
 }
 
@@ -22,7 +22,10 @@ if (!empty($resul)) {
 
 	login($resul["USR_NAME"], $resul["USR_EMAIL"]);
 
-	redirect("index.php");
+	echo 'Login Efetuado com Sucesso';
+}
+else{
+	echo 'Login Errado Tente Novamente';
 }
 
 

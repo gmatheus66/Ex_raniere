@@ -10,12 +10,12 @@ $pw2 = $_POST['pw2']?? "";
 
 
 if($pw != $pw2){
-	redirect("index.php");
+	echo 'As senhas nao podem ser diferentes';
 
 }
 
 if($name == "" || $email == ""){
-	redirect("index.php");
+	echo 'Campos Vazios';
 
 }
 else{
@@ -26,7 +26,8 @@ else{
 		$smt -> bindParam(2,$email);
 		$smt -> bindParam(3, $pw);
 		$smt -> execute();
-		redirect("index.php");
+		
+		echo 'Usuario Cadastrado';
 
 	var_dump("nao, nao, entrou foi aqui");
 	} catch (Exception $e) {

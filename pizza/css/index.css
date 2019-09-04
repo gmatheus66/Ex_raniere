@@ -31,8 +31,30 @@ h2{
 table,th,td{
 	border: 1px solid black;
 	border-collapse: collapse;
-	margin-left: 35%;
+	margin-left: 33%;
 	margin-right: 30%;
 	margin-top: 5%;
 
+}
+
+.cadastrar-pizza{
+	margin-left: 35%;
+
+}
+
+#btn-adicionar{
+	margin-left: 15%;
+	padding: 1%;
+}
+.sair{
+	display: inline-block;
+}
+h4{
+	display: inline-block;
+}
+
+.user{
+	position: absolute;
+	margin-left: 85%;
+	margin-bottom: 80%;
 }
