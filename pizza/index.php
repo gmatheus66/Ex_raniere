@@ -66,7 +66,7 @@ if (!empty($_SESSION['name'])) {
  			</tr>
  		</thead>
  		<tbody>
- 			<?php foreach (get_pizza() as $id => $value): ?>
+ 			<?php foreach (get_pizza() as $i => $value): ?>
  			<tr>	
  				<td><?= $value[1] ?></td>
  				<td><?= $value[2] ?></td>
@@ -75,7 +75,7 @@ if (!empty($_SESSION['name'])) {
  				<td><?= $value[5] ?></td>
  				<?php if($value[0] == $resul['USR_ID'] ): ?>
 	 				<?php if(logado()): ?>
-	 					<td><a href="remove.php?rm=<?=$id?>"> Excluir</a></td>
+	 					<td><a href="remove.php?rm=<?=$i?>"> Excluir</a></td>
 	 				<?php endif ?>
  				<?php endif ?>
  			</tr>

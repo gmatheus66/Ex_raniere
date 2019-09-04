@@ -27,3 +27,12 @@ h2{
 	margin-left: 35%;
 	margin-right: 40%;
 }
+
+table,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-left: 35%;
+	margin-right: 30%;
+	margin-top: 5%;
+
+}
